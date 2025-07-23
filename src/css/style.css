@@ -29,7 +29,6 @@
 
 body{
     background: var(--primary-bg-color);
-    height: 100vh;
     font-family: "Inter", sans-serif;
 }
 
@@ -121,6 +120,8 @@ a{
     gap: 1rem;
 }
 
+
+
 @media (min-width: 768px ){
     .header{ 
         position: fixed;
@@ -146,5 +147,21 @@ a{
 @media (min-width: 1400px){
     .header{ 
         padding: 1rem 15rem;
+    }
+    
+}
+
+main {
+    min-height: calc(100vh - 100px);
+}
+
+footer p {
+    text-align: center;
+    color: var(--text-color);
+    a {
+         color: var(--text-color);
+         &:hover{
+            color: var(--icon-color);
+         }
     }
 }
