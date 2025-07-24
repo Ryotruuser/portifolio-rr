@@ -1,4 +1,4 @@
-:root {
+:root, :root[data-theme ="dark"]{
 
     /* Dark theme */
     --primary-color: #F0F0F0;
@@ -11,20 +11,21 @@
     --text-color: #9A9A9C;
     --link-color: #9A9A9C;
     --icon-color: #C7C8C9;
+}
 
+:root[data-theme ="light"]{
     /* Light Theme */
 
-    --l-primary-color: #0B0B0F;
+    --primary-color: #0B0B0F;
 
-    --l-primary-bg-color: #E9E9E9;
-    --l-secondary-bg-color: #C7C8C9;
-    --l-border-color: #C7C8C9;
+    --primary-bg-color: #E9E9E9;
+    --secondary-bg-color: #C7C8C9;
+    --border-color: #C7C8C9;
 
-    --l-title-color: #0B0B0F;
-    --l-text-color: #28292E;
-    --l-link-color: #28292E;
-    --l-icon-color: #56575A;
-
+    --title-color: #0B0B0F;
+    --text-color: #28292E;
+    --link-color: #28292E;
+    --icon-color: #56575A;
 }
 
 body{
@@ -62,6 +63,7 @@ a{
 #toggleTheme {
     font-size: 1.5rem;
     color: var(--primary-color);
+    transition: ease-in-out .4s;
 }
 
 .menu {
