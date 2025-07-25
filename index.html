@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <span id="home"></span>
     <header class="header">
         <nav class="header__nav">
             <ul class="menu menu--principal">
@@ -57,7 +58,7 @@
     <nav class="nav--mobile">
         <ul class="menu menu--mobile">
             <li class="menu__item">
-                <a class="menu__link active" href="#home">
+                <a class="menu__link" href="#home">
                     <i class="menu__icon bi bi-house-door"></i>
                     <span class="menu__text">Home</span>
                 </a>
@@ -90,9 +91,9 @@
             <h1><b>Soluções Criativas &</b> Desenvolvimento Front-end</h1>
             <p>Renan Ramos, Salvador-Ba, Estudande de programação e Analista de sistemas</p>
             <ul class="menu menu--social">
-                <li><a class="menu__link" href=""><i class="menu__icon bi bi-github"></i></a></li>
-                <li><a class="menu__link" href=""><i class="menu__icon bi bi-linkedin"></i></a></li>
-                <li><a class="menu__link" href=""><i class="menu__icon bi bi-instagram"></i></a></li>
+                <li><a class="menu__link" href="https://github.com/Ryotruuser" target="_blank"><i class="menu__icon bi bi-github"></i></a></li>
+                <li><a class="menu__link" href="https://www.linkedin.com/in/ryotruuser/" target="_blank"><i class="menu__icon bi bi-linkedin"></i></a></li>
+                <li><a class="menu__link" href="#home"><i class="menu__icon bi bi-instagram"></i></a></li>
             </ul>
             <a href="#projetos" class="btn btn--primary">
                 <span>Ver Projetos</span>
@@ -119,26 +120,24 @@
         <div class="projects__container">
 
             <div class="projects__card">
-                <img class="card__cover" src="src/assets/projects/yugioh.PNG" alt="AcquaPark landing page">
+                <img class="card__cover" src="src/assets/projects/landingPageDio.png" alt="Dio trilha css landing page">
                 <div class="card__body">
-                    <h3 class="card__title">Acqua Park Landing Page</h3>
-                    <p class="card__description">Site para Waterpark</p>
+                    <h3 class="card__title">Landing Page DIO - Trilha CSS</h3>
+                    <p class="card__description">Landing page apresentando a trilha do curso de CSS da DIO</p>
                     <ul class="card__list">
-                        <li class="card__item">Lorem ipsum dolor sit amet.</li>
-                        <li class="card__item">Lorem ipsum dolor sit amet.</li>
-                        <li class="card__item">Lorem ipsum dolor sit amet.</li>
+                        <li class="card__item">Listagem de módulos.</li>
+                        <li class="card__item">Chamada para formulário.</li>
+                        <li class="card__item">Design elegante.</li>
                     </ul>
                     <ul class="skills__list">
                         <li class="skills__item"><img class="skills__logo" src="src/assets/img/stack/html.svg" alt="logo html"></li>
-                        <li class="skills__item"><img class="skills__logo" src="src/assets/img/stack/js.svg" alt="logo js"></li>
-                        <li class="skills__item"><img class="skills__logo" src="src/assets/img/stack/react.svg" alt="logo do react"></li>
-                        <li class="skills__item"><img class="skills__logo" src="src/assets/img/stack/sass.svg" alt="logo do scss"></li>
+                        <li class="skills__item"><img class="skills__logo" src="src/assets/img/stack/css3.svg" alt="logo css3"></li>
                     </ul>
                     <div class="card__buttons">
-                        <button class="btn btn--primary">
+                        <a href="https://landing-page-dio-rho.vercel.app/" target="_blank" class="btn btn--primary">
                             <span>Prévia</span>
                             <i class="bi bi-arrow-up-right"></i>
-                        </button>
+                        </a>
 
                         <button class="btn">
                             <span>Repositório</span>
@@ -148,26 +147,25 @@
             </div>
 
             <div class="projects__card card--reverse">
-                <img class="card__cover" src="src/assets/projects/imobRR.PNG" alt="AcquaPark landing page">
+                <img class="card__cover" src="src/assets/projects/mundoInvertido.png" alt="Mundo Invertido landing">
                 <div class="card__body">
-                    <h3 class="card__title">Acqua Park Landing Page</h3>
-                    <p class="card__description">Site para Waterpark</p>
+                    <h3 class="card__title">Site Mundo Invertido</h3>
+                    <p class="card__description">Site com referências ao seriado Stranger Things.</p>
                     <ul class="card__list">
-                        <li class="card__item">Lorem ipsum dolor sit amet.</li>
-                        <li class="card__item">Lorem ipsum dolor sit amet.</li>
-                        <li class="card__item">Lorem ipsum dolor sit amet.</li>
+                        <li class="card__item">Modo interativo entre os mundos.</li>
+                        <li class="card__item">Vídeo de apresentação da série.</li>
+                        <li class="card__item">Formulário para inscrição no clube D&D.</li>
                     </ul>
                     <ul class="skills__list">
                         <li class="skills__item"><img class="skills__logo" src="src/assets/img/stack/html.svg" alt="logo html"></li>
+                        <li class="skills__item"><img class="skills__logo" src="src/assets/img/stack/css3.svg" alt="logo do css3"></li>
                         <li class="skills__item"><img class="skills__logo" src="src/assets/img/stack/js.svg" alt="logo js"></li>
-                        <li class="skills__item"><img class="skills__logo" src="src/assets/img/stack/react.svg" alt="logo do react"></li>
-                        <li class="skills__item"><img class="skills__logo" src="src/assets/img/stack/sass.svg" alt="logo do scss"></li>
                     </ul>
                     <div class="card__buttons">
-                        <button class="btn btn--primary">
+                        <a href="https://lp-mundo-invertido.vercel.app/" target="_blank" class="btn btn--primary">
                             <span>Prévia</span>
                             <i class="bi bi-arrow-up-right"></i>
-                        </button>
+                        </a>
 
                         <button class="btn">
                             <span>Repositório</span>
@@ -176,7 +174,91 @@
                 </div>     
             </div>
 
-            <a class="more__projects" href="#github">
+            <div class="projects__card ">
+                <img class="card__cover" src="src/assets/projects/mockDetona2.png" alt="Game detona Ralph">
+                <div class="card__body">
+                    <h3 class="card__title">Whac-a-Ralph</h3>
+                    <p class="card__description">Game inspirado em Detona Ralph</p>
+                    <ul class="card__list">
+                        <li class="card__item">Elementos arcade e pixel art.</li>
+                        <li class="card__item">Contagem de pontos, tempo e vida.</li>
+                        <li class="card__item">Diferentes ranks de vencedor baseado nos pontos adquiridos.</li>
+                    </ul>
+                    <ul class="skills__list">
+                        <li class="skills__item"><img class="skills__logo" src="src/assets/img/stack/html.svg" alt="logo html"></li>
+                        <li class="skills__item"><img class="skills__logo" src="src/assets/img/stack/css3.svg" alt="logo do css3"></li>
+                        <li class="skills__item"><img class="skills__logo" src="src/assets/img/stack/js.svg" alt="logo js"></li>
+                    </ul>
+                    <div class="card__buttons">
+                        <a href="https://detona-ralph-five.vercel.app/" target="_blank" class="btn btn--primary">
+                            <span>Prévia</span>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+
+                        <button class="btn">
+                            <span>Repositório</span>
+                        </button>
+                    </div>
+                </div>     
+            </div>
+
+            <div class="projects__card card--reverse">
+                <img class="card__cover" src="src/assets/projects/jogoDaMemoria.png" alt="Jogo da memoria com emojis">
+                <div class="card__body">
+                    <h3 class="card__title">Jogo da Memória</h3>
+                    <p class="card__description">Jogo da memória com emojis.</p>
+                    <ul class="card__list">
+                        <li class="card__item">Design elegante.</li>
+                        <li class="card__item">Dinamica básica de jogo de memoria com emojis.</li>
+                        <li class="card__item">Indicador de vitória e botão de reset.</li>
+                    </ul>
+                    <ul class="skills__list">
+                        <li class="skills__item"><img class="skills__logo" src="src/assets/img/stack/html.svg" alt="logo html"></li>
+                        <li class="skills__item"><img class="skills__logo" src="src/assets/img/stack/css3.svg" alt="logo do css3"></li>
+                        <li class="skills__item"><img class="skills__logo" src="src/assets/img/stack/js.svg" alt="logo js"></li>
+                    </ul>
+                    <div class="card__buttons">
+                        <a href="https://jogo-da-memoria-mu-azure.vercel.app/" target="_blank" class="btn btn--primary">
+                            <span>Prévia</span>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+
+                        <button class="btn">
+                            <span>Repositório</span>
+                        </button>
+                    </div>
+                </div>     
+            </div>
+
+            <div class="projects__card">
+                <img class="card__cover" src="src/assets/projects/acquaPark.png" alt="Site acqua Park">
+                <div class="card__body">
+                    <h3 class="card__title">Acqua Park Website</h3>
+                    <p class="card__description">Website fictício para Water Park Acqua Park </p>
+                    <ul class="card__list">
+                        <li class="card__item">Design elegante.</li>
+                        <li class="card__item">Galeria interativa com comentários.</li>
+                        <li class="card__item">Área de suporte e localização</li>
+                    </ul>
+                    <ul class="skills__list">
+                        <li class="skills__item"><img class="skills__logo" src="src/assets/img/stack/html.svg" alt="logo html"></li>
+                        <li class="skills__item"><img class="skills__logo" src="src/assets/img/stack/sass.svg" alt="logo do sass"></li>
+                        <li class="skills__item"><img class="skills__logo" src="src/assets/img/stack/js.svg" alt="logo js"></li>
+                    </ul>
+                    <div class="card__buttons">
+                        <a href="https://acqua-park.vercel.app/" target="_blank" class="btn btn--primary">
+                            <span>Prévia</span>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+
+                        <button class="btn">
+                            <span>Repositório</span>
+                        </button>
+                    </div>
+                </div>     
+            </div>
+
+            <a class="more__projects" href="https://github.com/Ryotruuser?tab=repositories" target="_blank">
                 <button class="btn btn--primary">
                     <span>Ver Todos os Projetos</span>
                     <i class="bi bi-arrow-up-right"></i>
@@ -252,13 +334,13 @@
         <p class="contact__text">Estou disponível para serviços e novas conexões. Contate-me via e-mail e conecte-se comigo através das minhas redes sociais</p>
         <div class="contact__socials">
             <ul class="menu menu--social">
-                <li><a class="menu__link" href=""><i class="menu__icon bi bi-github"></i></a></li>
-                <li><a class="menu__link" href=""><i class="menu__icon bi bi-linkedin"></i></a></li>
-                <li><a class="menu__link" href=""><i class="menu__icon bi bi-instagram"></i></a></li>
+                <li><a class="menu__link" href="https://github.com/Ryotruuser" target="_blank"><i class="menu__icon bi bi-github"></i></a></li>
+                <li><a class="menu__link" href="https://www.linkedin.com/in/ryotruuser/" target="_blank"><i class="menu__icon bi bi-linkedin"></i></a></li>
+                <li><a class="menu__link" href="#home"><i class="menu__icon bi bi-instagram"></i></a></li>
             </ul>
         </div>
         
-        <a href="https://www.linkedin.com/in/ryotruuser/" target="_blank">
+        <a href="mailto:riionansr@gmail.com" target="_blank">
             <button class="btn btn--primary">
                 <span>Riionansr@gmail.com</span>
             </button>

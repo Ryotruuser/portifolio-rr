@@ -1,5 +1,13 @@
 const toggleTheme = document.getElementById("toggleTheme");
 const rootHtml = document.documentElement;
+const menuLinksMobile = document.querySelectorAll(".menu__item .menu__link");
+
+menuLinksMobile.forEach((link)=>{
+    link.addEventListener("click", () => {
+        menuLinksMobile.forEach(link => link.classList.remove("active"));
+        link.classList.add("active");
+    });
+})
 
 function changeTheme(){
     const currentTheme = rootHtml.getAttribute("data-theme");
