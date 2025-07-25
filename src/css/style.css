@@ -382,6 +382,36 @@ html .skills__item:hover{
 
 }
 
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: .875rem;
+    h2 {
+        margin: 0;
+    }
+    .contact__text {
+        text-align: center;
+        font-size: 1rem;
+    }
+    a .btn span {
+        font-size: 1.2rem;
+        text-transform: lowercase;
+    } 
+    .contact__socials {
+        .menu {
+            display: flex;
+            flex: row wrap;
+            gap: 2rem;
+        }
+
+        ul li a i {
+            font-size: 2rem;
+        }
+    }
+}
+
 footer {
     margin-bottom: 5rem;
 }
