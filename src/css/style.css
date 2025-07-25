@@ -390,6 +390,9 @@ html .skills__item:hover{
         gap: 3rem;
     }
     .col1 {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
         @media screen and (min-width: 768px) {
             width: 505px;
         }
@@ -401,7 +404,7 @@ html .skills__item:hover{
         }
         .row1 h3, .row2 h3{
             @media screen and (min-width: 768px) {
-                /* font-size: 3rem; */
+                font-size: 3rem;
             }
         }
 
