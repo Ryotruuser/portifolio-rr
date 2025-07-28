@@ -6,6 +6,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    aspect-ratio: 16/9;
+    padding: 1rem;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    display: none;
+    h2 {
+        color: red;
+    }
     .game__data{
         display: flex;
         gap: 5rem;
@@ -17,14 +26,39 @@
         
     }
 
-    .game__ship{
-        width: 64px;
-        height: 64px;
-        position: absolute;
-        bottom: 0;
-        @media screen and (min-width: 1200px) {
+    .game__ship-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        user-select: none;
+        .game__ship{
+            width: 64px;
+            height: 64px;
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+            @media screen and (min-width: 1200px) {
                 width: 128px;
                 height: 128px;
+            }
         }
+        .game__ship-canon{
+            position: absolute;
+            bottom: 25px;
+            .game__ship-shoot{
+                position: absolute;
+                bottom: 0;
+                left: 1px;
+                padding: .1rem;
+                background: red;
+            }
+        } 
+
+
     }
+
+    
+
 }
