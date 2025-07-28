@@ -44,21 +44,13 @@
                 height: 128px;
             }
         }
-        .game__ship-canon{
-            position: absolute;
-            bottom: 25px;
-            .game__ship-shoot{
-                position: absolute;
-                bottom: 0;
-                left: 1px;
-                padding: .1rem;
-                background: red;
-            }
-        } 
-
-
     }
-
+    .game__ship-shoot {
+        position: absolute;
+        padding: .1rem;
+        background-color: red;
+        z-index: 1;
+    }
     
 
 }
