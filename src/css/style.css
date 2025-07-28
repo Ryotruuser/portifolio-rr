@@ -76,6 +76,7 @@ p {
     align-items: center;
     padding: 0.5rem 1rem;
     width: 100%;
+    z-index: 9999;
 }
 
 .header__toggle{
@@ -202,6 +203,23 @@ main {
 .btn:hover {
     transform: scale(1.05);
     transition: ease-in-out .3s;
+}
+
+.main__content2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .play-btn-span{
+        position: absolute;
+        a {
+            cursor: pointer;
+            i { 
+                font-size: 10rem;
+                color: #000;
+            }
+            
+        }
+    }
 }
 
 .main__content2 img {
@@ -638,5 +656,3 @@ footer p {
     }
     
 }
-
-

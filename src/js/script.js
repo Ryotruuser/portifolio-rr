@@ -2,6 +2,8 @@ const toggleTheme = document.getElementById("toggleTheme");
 const rootHtml = document.documentElement;
 const menuLinksMobile = document.querySelectorAll(".menu__item .menu__link");
 
+const fakeBtn = document.querySelector(".play-fake-btn");
+
 menuLinksMobile.forEach((link)=>{
     link.addEventListener("click", () => {
         menuLinksMobile.forEach(link => link.classList.remove("active"));
@@ -25,5 +27,13 @@ function changeTheme(){
 
 }
 
+function gameExec(){
+    console.log("Clickou");
+}
+
 toggleTheme.addEventListener("click", changeTheme);
+
+
+fakeBtn.addEventListener("click", gameExec);
+
 
