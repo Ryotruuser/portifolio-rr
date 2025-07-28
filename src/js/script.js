@@ -3,6 +3,7 @@ const rootHtml = document.documentElement;
 const menuLinksMobile = document.querySelectorAll(".menu__item .menu__link");
 
 const fakeBtn = document.querySelector(".play-fake-btn");
+const gameDiv = document.querySelector(".main__content2-game");
 
 menuLinksMobile.forEach((link)=>{
     link.addEventListener("click", () => {
@@ -28,7 +29,7 @@ function changeTheme(){
 }
 
 function gameExec(){
-    console.log("Clickou");
+    gameDiv.style.display = "block";
 }
 
 toggleTheme.addEventListener("click", changeTheme);
