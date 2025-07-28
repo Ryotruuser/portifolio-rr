@@ -1,0 +1,30 @@
+.main__content2-game{
+    background-image: url("../assets/img/bg/stars2.gif");
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: 100vw 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .game__data{
+        display: flex;
+        gap: 5rem;
+        h3 {
+            @media screen and (min-width: 1200px) {
+                font-size: 2rem;
+            }
+        }
+        
+    }
+
+    .game__ship{
+        width: 64px;
+        height: 64px;
+        position: absolute;
+        bottom: 0;
+        @media screen and (min-width: 1200px) {
+                width: 128px;
+                height: 128px;
+        }
+    }
+}

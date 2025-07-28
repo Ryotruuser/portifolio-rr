@@ -4,6 +4,8 @@ const menuLinksMobile = document.querySelectorAll(".menu__item .menu__link");
 
 const fakeBtn = document.querySelector(".play-fake-btn");
 const gameDiv = document.querySelector(".main__content2-game");
+const videoDiv = document.querySelector(".main__content2");
+const videoApresentacao = document.querySelector(".video__apresentacao");
 
 menuLinksMobile.forEach((link)=>{
     link.addEventListener("click", () => {
@@ -29,7 +31,23 @@ function changeTheme(){
 }
 
 function gameExec(){
-    gameDiv.style.display = "block";
+    let videoHeight = window.innerWidth;
+    if(videoHeight >= 768){
+        videoDiv.style.height = "auto";
+    }else{
+        videoDiv.style.height = "500px";
+    }
+    window.addEventListener("resize", ()=>{
+        const width = window.innerWidth;
+        if(width >= 768){
+            videoDiv.style.height = "auto";
+        }else{
+            videoDiv.style.height = "500px";
+        }
+    })
+    gameDiv.style.display = "flex";
+    videoApresentacao.style.zIndex = "-1";
+    fakeBtn.style.zIndex = "-1"
 }
 
 toggleTheme.addEventListener("click", changeTheme);

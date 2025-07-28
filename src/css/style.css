@@ -208,26 +208,34 @@ main {
 .main__content2{
     display: flex;
     justify-content: center;
+    position: relative;
     align-items: center;
-    transition: all 1s;
+    transition: transform .3s ease;
+    height: auto;
     .play-btn-span{
         position: absolute;
         a {
             cursor: pointer;
             i { 
-                font-size: 10rem;
+                font-size: 5rem;
                 color: #000;
+                transition: all 0.2s ease;
+                &:hover{
+                    color: red;
+                    color: #800000;
+                    font-size: 10.5rem;
+                }
             }
             
         }
     }
     .main__content2-game{
         position: absolute;
-        background: #fff;
-        width: 1440px;
-        height: 800px;
-        padding: 2rem;
-        border-radius: 1rem;
+        aspect-ratio: 16/9;
+        padding: 1rem;
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
         display: none;
         h2 {
             color: red;
@@ -566,6 +574,9 @@ footer p {
 
     .contact {
       padding: 1.25rem 5rem 4rem 5rem;  
+    }
+    .main__content2{
+        height: auto;
     }
 }
 
