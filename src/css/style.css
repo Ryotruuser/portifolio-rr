@@ -107,7 +107,7 @@ p {
 
 .menu--mobile {
     width: 100vw;
-    z-index: 2;
+    z-index: 9999;
     position: fixed;
     bottom: 0;
     justify-content: space-between;

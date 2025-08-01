@@ -5,20 +5,22 @@
     background-size: 100vw 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     aspect-ratio: 16/9;
     padding: 1rem;
     border-radius: 10px;
     height: 100%;
     width: 100%;
     display: none;
+    overflow: hidden;
     h2 {
         color: red;
     }
     .game__data{
         display: flex;
-        gap: 5rem;
         h3 {
+            font-family: "Press Start 2P", system-ui;
+            font-size: .8rem;
+            color: #efd69d;
             @media screen and (min-width: 1200px) {
                 font-size: 2rem;
             }
@@ -50,6 +52,39 @@
         padding: .1rem;
         background-color: red;
         z-index: 1;
+    }
+
+    .game__enemy-container{
+        display: flex;
+        flex-direction: column;
+        padding: 0 .8rem;
+        position: absolute;
+        left: 0;
+        top: 0px;
+        height: 100px;
+        width: 100%;
+        img{
+            padding: 0;
+            margin: 0;
+        }
+        .enemy__health-bar{ 
+            position: absolute;
+            top: 16px;
+            right: 2px;
+            width: 150px;
+            border-radius: 10px;
+            padding: .5rem;
+            background-color: green;
+            z-index: 2;
+            
+        }
+        .game__enemy{ 
+            position: absolute; 
+            width: 128px;
+            top: 30px;
+            margin: 0;
+            padding: 0;
+        }
     }
     
 
