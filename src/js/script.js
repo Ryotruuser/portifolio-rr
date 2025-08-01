@@ -52,7 +52,6 @@ function gameExec(){
 
 toggleTheme.addEventListener("click", changeTheme);
 
-
 fakeBtn.addEventListener("click", gameExec);
 
 

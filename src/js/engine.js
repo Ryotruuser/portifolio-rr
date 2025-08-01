@@ -13,14 +13,26 @@ const state = {
 let shipPosition = 140;
 let colCont = 0;
 let enemyHealthBar = 150;
+let autoShootInterval = null;
 
+function playAudio(audioName, loop = false, extensao = ".mp3"){
+    const soundToPlay = new Audio(`./src/assets/sounds/${audioName}${extensao}`);
+    soundToPlay.play();
+    soundToPlay.volume = 0.1;
+    soundToPlay.loop = true;
+}
 
+state.view.fakeBtn.addEventListener("click", ()=>{
+    playAudio("spacebg", true);    
+})
 
 function shipCenter(){
     const shipRect = state.sprites.ship.getBoundingClientRect();
     const gameRect = state.view.gameView.getBoundingClientRect();
     return shipRect.left - gameRect.left + (shipRect.width / 2);
 }
+const shootSound = new Audio("./src/assets/sounds/bullet.mp3");
+shootSound.volume = 0.1;
 
 function cannonShot() {
     const shoot = document.createElement("div");
@@ -28,10 +40,15 @@ function cannonShot() {
 
     const shipCenterX = shipCenter();
 
-    shoot.style.left = `${shipCenterX - 2}px`;
+    shoot.style.left = `${shipCenterX - 3.5}px`;
     shoot.style.bottom = `64px`; 
 
     state.view.gameView.appendChild(shoot);
+    shootSound.play();
+    shootSound.currentTime = 0;
+    
+
+
 
     let position = 64;
     const move = setInterval(() => {
@@ -66,6 +83,12 @@ function moveShip() {
     });
 }
 
+const dmgSound = new Audio("./src/assets/sounds/dmg.mp3");
+dmgSound.volume = 0.5;
+
+const winSound = new Audio("./src/assets/sounds/finish.wav");
+winSound.volume = 0.1;
+
 function verifyCollision(bullet, move){
     const enemies = document.querySelectorAll(".game__enemy");
     let bulletRect = bullet.getBoundingClientRect();
@@ -80,6 +103,9 @@ function verifyCollision(bullet, move){
 
         if (colisaoVertical && colisaoHorizontal) {
             
+            dmgSound.play()
+            dmgSound.currentTime = 0
+
             bullet.remove();
             clearInterval(move);
             colCont++
@@ -90,6 +116,9 @@ function verifyCollision(bullet, move){
             enemyHealth.style.width = enemyHealthBar + "px";
 
             if(enemyHealthBar <= 0){
+                winSound.play();
+                winSound.currentTime = 0;
+
                 gameClose();
             }
         }
@@ -102,11 +131,11 @@ function verifyCollision(bullet, move){
 }
 
 function startAutoShoot() {
-    setInterval(() => {
+    autoShootInterval = setInterval(() => {
         if (state.view.gameView.style.display === "flex") {
             cannonShot();
         }
-    }, 100);
+    }, 1200);
 }
 
 function init() {
@@ -116,8 +145,17 @@ function init() {
 
 
 function gameClose(){
-    let winner = `<div><h2>Obrigado por jogar</h2><h4>você marcou ${colCont} pontos.</h4> <button onclick="window.load()">Voltar<button></div>`;
+    clearInterval(autoShootInterval);
+    shootSound.pause();
+    shootSound.currentTime = 0;
+    let winner = `
+    <div class="finalBoard">
+        <h2>Obrigado por jogar</h2>
+        <h4>você marcou ${colCont} pontos.</h4>
+        <button onclick="window.location.reload()"  class="rpgui-button" >Voltar</button>
+    </div>`;
     state.view.gameView.innerHTML = winner;
+
 
 }
 

@@ -50,8 +50,12 @@
     .game__ship-shoot {
         position: absolute;
         padding: .1rem;
-        background-color: red;
+        width: 8px;
+        height: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
         z-index: 1;
+        background-image: url("/src/assets/img/sprite/bullet.png");
     }
 
     .game__enemy-container{
@@ -74,7 +78,8 @@
             width: 150px;
             border-radius: 10px;
             padding: .5rem;
-            background-color: green;
+            background-color: lightcoral;
+            transition: width .5s ease;
             z-index: 2;
             
         }
@@ -85,6 +90,40 @@
             margin: 0;
             padding: 0;
         }
+    }
+
+    .finalBoard{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        background-color: rgba(255, 255, 255, 0.3);
+        justify-content: center;
+        align-items: center;
+        h2{
+            font-family: "Press Start 2P", system-ui;
+            color: #efd69d;
+            font-weight: 600;
+            margin: 0;
+        }
+        h4 {
+            font-family: "Press Start 2P", system-ui;
+            color: #efd69d;
+            font-weight: 500;
+            font-size: .7rem;
+        }
+        button{
+            font-family: "Press Start 2P", system-ui;
+            text-transform: uppercase;
+            padding:1em 4rem;
+            font-size: 1rem;
+            color: #efd69d;
+            text-shadow: 1px 1px #000;
+        }
+
     }
     
 
